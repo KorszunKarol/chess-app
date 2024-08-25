@@ -1,0 +1,5 @@
+.chess-game-controls {
+    display: flex;
+    position: relative;
+    right: 15%;
+}

@@ -1,0 +1,53 @@
+.score-display {
+    position: absolute;
+    top: 70px;
+    left: 513px;
+    transition: opacity 0.5s ease-in-out;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 893px;
+    height: 128px;
+  }
+
+  .score-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease-out;
+  }
+
+  .score-circle:hover {
+    transform: scale(1.05);
+  }
+
+  .score-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .score-message {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .score-label {
+    font-size: 12px;
+    color: #666;
+  }
+
+  .score-green { background-color: #48bb78; }
+  .score-orange { background-color: #ed8936; }
+  .score-red { background-color: #f56565; }
+
+  .fade-in { opacity: 1; }
+  .fade-out { opacity: 0; }

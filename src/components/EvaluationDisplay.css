@@ -1,0 +1,93 @@
+.evaluation-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+.eval-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.eval-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eval-label {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-bottom: 4px;
+}
+
+.eval-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.score-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.score-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: conic-gradient(
+    from 0deg,
+    var(--gradient-start) calc(var(--score) / 100 * 360deg),
+    var(--gradient-end) calc(var(--score) / 100 * 360deg)
+  );
+  transition: background 1s ease;
+}
+
+.player-score {
+  --gradient-start: #48bb78;
+  --gradient-end: #2f855a;
+}
+
+.ai-score {
+  --gradient-start: #4299e1;
+  --gradient-end: #2b6cb0;
+}
+
+.score-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 1;
+}
+
+.score-label {
+  font-size: 14px;
+  color: #e2e8f0;
+  z-index: 1;
+}

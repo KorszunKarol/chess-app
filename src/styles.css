@@ -1,0 +1,128 @@
+/* Reset and base styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+
+  /* Chess game layout */
+  .chess-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .chess-game {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .game-board {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .game-board {
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+  }
+
+  .game-info {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Score display */
+  .score-display {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-out;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .score-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease-out;
+  }
+
+  .score-circle:hover {
+    transform: scale(1.05);
+  }
+
+  .score-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .score-message {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .score-label {
+    font-size: 12px;
+    color: #666;
+  }
+
+  .score-green { background-color: #48bb78; }
+  .score-orange { background-color: #ed8936; }
+  .score-red { background-color: #f56565; }
+
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  /* Buttons */
+  .new-position-btn {
+    background-color: #4a5568;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+  }
+
+  .new-position-btn:hover {
+    background-color: #2d3748;
+  }
